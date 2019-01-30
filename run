@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+docker pull ghost:2-alpine
+docker stop blog
+docker rm blog
 docker run --name=blog -p 2368:2368 \
 	-v ${PWD}/content:/var/lib/ghost/content \
 	-e url=https://blog.neigor.me \
