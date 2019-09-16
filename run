@@ -1,15 +1,4 @@
 #!/bin/bash
 set -e
 
-docker pull ghost:2-alpine
-docker stop blog || true
-docker rm blog || true
-docker run --name=blog -p 2368:2368 \
-	-v ${PWD}/content:/var/lib/ghost/content \
-	-e url=https://blog.neigor.me \
-	-e mail__from="'Ghost Blog' <blog@hashdivision.com>" \
-	-e mail__transport=SMTP \
-	-e mail__options__host=172.17.0.1 \
-	-e mail__options__port=7664 \
-	--restart=always \
-	-d ghost:2-alpine
+sudo docker stack deploy -c stack.yml ghost
