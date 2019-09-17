@@ -11,7 +11,7 @@ services:
       mail__options__host: 172.17.0.1
       mail__options__port: 7664
     volumes:
-      - ./content:/var/lib/ghost/content
+      - ../content:/var/lib/ghost/content
     deploy:
       replicas: 2
       update_config:

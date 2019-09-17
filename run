@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-sudo docker stack deploy -c stack.yml ghost
+sudo docker stack deploy -c stacks/integrated.yml ghost
