@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+sudo docker stack deploy -c stacks/standalone.yml ghost

@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-sudo docker stats --no-stream $(sudo docker ps -aqf "name=ghost_blog.*")
+sudo docker stats --no-stream $(sudo docker ps -qf "name=ghost_*")
