@@ -3,3 +3,4 @@ set -e
 
 sudo docker service update --image ghost:2-alpine ghost_blog
 sudo docker service update --image nginx:stable-alpine ghost_nginx || true
+sudo docker service update --image mysql:5.7 ghost_database || true

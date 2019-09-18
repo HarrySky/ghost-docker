@@ -10,6 +10,12 @@ services:
       mail__transport: SMTP
       mail__options__host: 172.17.0.1
       mail__options__port: 7664
+      database__client: mysql
+      database__connection__host: 172.17.0.1
+      database__connection__port: 3306
+      database__connection__user: root
+      database__connection__password: ghost
+      database__connection__database: ghost
     volumes:
       - ../content:/var/lib/ghost/content
     deploy:
