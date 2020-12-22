@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+sudo docker service scale --detach ghost_blog=0
+sudo docker service scale ghost_blog=1
