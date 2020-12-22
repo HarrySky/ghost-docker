@@ -2,5 +2,5 @@
 set -e
 
 sudo docker service scale ghost_blog=2
-sudo docker service update --image ghost:2-alpine ghost_blog
+sudo docker service update --image ghost:3-alpine ghost_blog
 sudo docker service scale ghost_blog=1
